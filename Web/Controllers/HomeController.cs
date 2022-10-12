@@ -15,7 +15,14 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        var stringlist = new List<string>(){ "one", "two", "three" };
+        return View(stringlist);
+    }
+    
+    public IActionResult About()
+    {
+        var stringlist = new List<string>(){ "four", "five", "six" };
+        return View(stringlist);
     }
 
     public IActionResult Privacy()
