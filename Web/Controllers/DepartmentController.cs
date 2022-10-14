@@ -56,6 +56,13 @@ public class DepartmentController:Controller
         return RedirectToAction("Index");
     }
     
+    [HttpGet]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _departmentService.DeleteDepartment(id);
+        return RedirectToAction("Index");
+    }
+    
     
    
 }
